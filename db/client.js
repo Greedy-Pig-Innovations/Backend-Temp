@@ -1,7 +1,8 @@
-const { Client } = require('pg')
+const { Client } = require('pg');
+
 
 const client = new Client({
-    connectionString: process.env.DATABASE_URL || 'postgres://localhost:5432/emazon_dev',
+    connectionString: process.env.DATABASE_URL || `postgres://localhost:5432/upsale_dev`,
     ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : undefined,
   });
 
